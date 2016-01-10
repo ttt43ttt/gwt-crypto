@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" output="target/gwt-crypto-0.0.1-SNAPSHOT/WEB-INF/classes" path="src/main/java">
+	<classpathentry kind="src" output="target/gwt-crypto-2.7.0-SNAPSHOT/WEB-INF/classes" path="src/main/java">
 		<attributes>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" output="target/gwt-crypto-0.0.1-SNAPSHOT/WEB-INF/classes" path="target/generated-sources/gwt">
+	<classpathentry kind="src" output="target/gwt-crypto-2.7.0-SNAPSHOT/WEB-INF/classes" path="target/generated-sources/gwt">
 		<attributes>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry excluding="**" kind="src" output="target/gwt-crypto-0.0.1-SNAPSHOT/WEB-INF/classes" path="src/main/resources">
+	<classpathentry excluding="**" kind="src" output="target/gwt-crypto-2.7.0-SNAPSHOT/WEB-INF/classes" path="src/main/resources">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
@@ -28,7 +28,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="src/main/gwt"/>
+	<classpathentry excluding="org/bouncycastle/emul/" kind="src" path="src/main/gwt"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
@@ -37,8 +37,8 @@
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/gwtx"/>
+	<classpathentry kind="output" path="target/gwt-crypto-2.7.0-SNAPSHOT/WEB-INF/classes"/>
 </classpath>
