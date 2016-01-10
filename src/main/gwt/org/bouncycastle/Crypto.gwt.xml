@@ -4,10 +4,28 @@
   <inherits name='com.google.gwt.user.User' />
 
   <!-- Other module inherits                                      -->
-
+  <inherits name='gwtx.java.Lang' />
+  <inherits name='gwtx.java.Io' />
+  <inherits name='gwtx.java.Util' />
 
   <!-- Specify the paths for translatable code                    -->
+  <source path='asn1' />
+  <source path='bcpg' />
+  <source path='cert' />
+  <source path='cms' />
   <source path='crypto' />
+  <source path='dvcs' />
+  <source path='eac' />
+  <source path='math' />
+  <source path='openpgp' />
+  <source path='operator' />
+  <source path='pkcs' />
+  <source path='pkix' />
+  <source path='pqc' />
+  <source path='tsp' />
   <source path='util' />
+  
+  <!-- Replace the types that are not translatable -->
+  <super-source path='emul' />
 
 </module>

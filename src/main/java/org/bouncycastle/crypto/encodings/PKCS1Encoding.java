@@ -18,6 +18,7 @@ public class PKCS1Encoding
     /**
      * @deprecated use NOT_STRICT_LENGTH_ENABLED_PROPERTY
      */
+    @Deprecated
     public static final String STRICT_LENGTH_ENABLED_PROPERTY = "org.bouncycastle.pkcs1.strict";
 
     /**
@@ -93,15 +94,16 @@ public class PKCS1Encoding
     private boolean useStrict()
     {
         // required if security manager has been installed.
-        String strict = System.getProperty(STRICT_LENGTH_ENABLED_PROPERTY);
-        String notStrict = System.getProperty(NOT_STRICT_LENGTH_ENABLED_PROPERTY);
-
-        if (notStrict != null)
-        {
-            return !notStrict.equals("true");
-        }
-
-        return strict == null || strict.equals("true");
+//        String strict = System.getProperty(STRICT_LENGTH_ENABLED_PROPERTY);
+//        String notStrict = System.getProperty(NOT_STRICT_LENGTH_ENABLED_PROPERTY);
+//
+//        if (notStrict != null)
+//        {
+//            return !notStrict.equals("true");
+//        }
+//
+//        return strict == null || strict.equals("true");
+        return true;
     }
 
     public AsymmetricBlockCipher getUnderlyingCipher()
@@ -109,6 +111,7 @@ public class PKCS1Encoding
         return engine;
     }
 
+    @Override
     public void init(
         boolean             forEncryption,
         CipherParameters    param)
@@ -134,6 +137,7 @@ public class PKCS1Encoding
         this.forEncryption = forEncryption;
     }
 
+    @Override
     public int getInputBlockSize()
     {
         int     baseBlockSize = engine.getInputBlockSize();
@@ -148,6 +152,7 @@ public class PKCS1Encoding
         }
     }
 
+    @Override
     public int getOutputBlockSize()
     {
         int     baseBlockSize = engine.getOutputBlockSize();
@@ -162,6 +167,7 @@ public class PKCS1Encoding
         }
     }
 
+    @Override
     public byte[] processBlock(
         byte[]  in,
         int     inOff,

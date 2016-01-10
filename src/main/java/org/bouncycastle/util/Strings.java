@@ -4,25 +4,25 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Vector;
-import java.util.Iterator;
 
 public final class Strings
 {
-    private static String LINE_SEPARATOR;
+    private static final String LINE_SEPARATOR = "\n";
 
-    static
-    {
-       try
-       {
-           LINE_SEPARATOR = System.getProperty("line.separator");
-       }
-       catch (Exception e)
-       {
-           LINE_SEPARATOR = "\n";   // we're desperate use this...
-       }
-    }
+//    static
+//    {
+//       try
+//       {
+//           LINE_SEPARATOR = System.getProperty("line.separator");
+//       }
+//       catch (Exception e)
+//       {
+//           LINE_SEPARATOR = "\n";   // we're desperate use this...
+//       }
+//    }
 
     public static String fromUTF8ByteArray(byte[] bytes)
     {
@@ -344,11 +344,13 @@ public final class Strings
     {
         private List list = new ArrayList();
 
+        @Override
         public boolean add(String s)
         {
             return list.add(s);
         }
 
+        @Override
         public String get(int index)
         {
             return (String)list.get(index);
@@ -364,16 +366,19 @@ public final class Strings
             list.add(index, element);
         }
 
+        @Override
         public int size()
         {
             return list.size();
         }
 
+        @Override
         public Iterator iterator()
         {
             return list.iterator();
         }
 
+        @Override
         public String[] toStringArray()
         {
             String[] strs = new String[this.size()];
@@ -386,6 +391,7 @@ public final class Strings
             return strs;
         }
 
+        @Override
         public String[] toStringArray(int from, int to)
         {
             String[] strs = new String[to - from];
