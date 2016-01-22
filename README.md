@@ -1,5 +1,5 @@
 # gwt-crypto
--- *A GWT cryptography library ported from "Legion of the Bouncy Castle".
+-- *A GWT cryptography library ported from "Legion of the Bouncy Castle".*
 
 #### How did I compile this library?
 1. Download the latest sources for J2ME from https://www.bouncycastle.org/latest_releases.html.
