@@ -99,12 +99,11 @@
     <outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes</outputDirectory>
 
     <resources>
+      <resource>
+        <directory>src/main/java</directory>
+      </resource>
 	  <resource>
         <directory>src/main/gwt</directory>
-        <includes>
-          <include>**/emul/**/*.java</include>
-          <include>**/*.gwt.xml</include>
-        </includes>
       </resource>
     </resources>
 
